@@ -1,0 +1,1736 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/*Navbar*/
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background: #053b5d;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: -100%;
+  height: calc(100vh - 50px);
+  background: #000;
+  transition: 0.3s;
+}
+
+nav.active {
+  left: 0%;
+}
+
+nav ul li {
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+nav ul li.dropdown i {
+  margin-left: 10px;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  border-bottom: 3px solid rgb(18, 202, 12);
+  width: auto;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+nav ul li ul {
+  position: absolute;
+  top: 2.5rem;
+  display: none;
+  background: #03324f;
+  transition: 0.5s;
+}
+
+nav ul li ul li {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav ul li:hover ul {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+
+@media screen and (min-width: 550px) {
+  nav {
+    position: initial;
+    width: 70%;
+    height: 25px;
+    background: transparent;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    padding: 0 0 1rem 0;
+    text-align: left;
+  }
+
+  nav ul li:hover ul {
+    width: 200px;
+    position: absolute;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#page-container {
+  position: relative;
+  min-height: 84vh;
+}
+
+footer {
+  background: #053b5d;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  width: 100vw;
+  height: 8vh;
+  overflow-x: hidden;
+}
+
+/*Homepagina*/
+.background {
+  background-image: url("./img/bg.png");
+}
+
+.containerh {
+  display: flex;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+  /* perspective: 90rem;
+  perspective-origin: 30% 60%; */
+}
+
+.text {
+  font-size: 2.5rem;
+  padding-top: 10rem;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.transform {
+  display: flex;
+  /* transform: rotateX(10deg) rotateY(15deg) rotateZ(-9deg) scale3d(1, 1, -0.9)
+  scale(1.1) translateX(50px); */
+}
+
+.cardh {
+  background: #03324f;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0px 18px;
+  width: 244px;
+  transition: 0.5s ease;
+  overflow: hidden;
+  transform: translate(0);
+}
+
+.cardh::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.cardh h2 {
+  padding-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+.cardh p {
+  padding-top: 0.6rem;
+}
+
+.cardh h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 48px;
+}
+
+.cardh a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 48px;
+}
+
+.card-1 {
+  background-size: cover;
+  transition: scale(1.02);
+  margin-right: 40px;
+  height: 12rem;
+  width: 20rem;
+}
+
+.card-1:hover {
+  transform: scale(1.11);
+  box-shadow: -7px 4px 28px -3px #b527cf;
+}
+
+.card-1::before {
+  background: linear-gradient(90deg, #b527cf 0%, #3546f0 100%);
+}
+
+.card-2 {
+  background-size: cover;
+  transform: scale(1.01);
+  margin-right: 31px;
+  height: 12rem;
+  width: 20rem;
+}
+
+.card-2:hover {
+  transform: scale(1.1);
+  box-shadow: -7px 4px 28px -3px #ff9500;
+}
+
+.card-2::before {
+  background: linear-gradient(90deg, #ff9500 0%, #d5cb0f 100%);
+}
+
+.card-3 {
+  background-size: cover;
+  height: 12rem;
+  width: 20rem;
+}
+
+.card-3:hover {
+  transform: scale(1.08);
+  box-shadow: -7px 4px 28px -3px #3bd9d9;
+}
+
+.card-3::before {
+  background: linear-gradient(90deg, #3bd9d9 0%, #8035f0 100%);
+}
+
+.linkp {
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+/*Dylan*/
+
+/*game*/
+
+#muziek{
+  margin-left: 6rem;
+  margin-top: 14rem;
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 4rem;
+  border: none;
+  position: absolute;
+  display: block;
+  background-color: #053b5d;
+  color: #fff;
+}
+
+#msgRef{
+position: absolute;
+top: 30%;
+left: 10%;
+}
+#text{
+padding-bottom: 0.5rem;
+}
+.containerd {
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+}
+.row5{
+display: flex;
+gap: 10px;
+}
+.row6{
+display: flex;
+gap: 10px;
+}
+.row7{
+  display: flex;
+  gap: 10px;
+}
+#restart {
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-radius: 4rem;
+  border: none;
+  position: relative;
+  margin: 2rem auto 0 auto;
+  display: block;
+  background-color: #053b5d;
+  color: #fff;
+}
+
+.container-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-buttons section {
+  padding: 2px;
+}
+#button-option{
+background: #053b5d;
+border: none;
+border-radius: 2rem;
+font-size: 5rem;
+color: rgb(18, 202, 12);
+box-shadow: 0 0 10rem rgba(0, 0, 0, 0.1);
+height: 10rem;
+width: 10rem;
+margin: 5px 0;
+}
+.playertext{
+font-size: 2rem;
+text-transform: uppercase;
+}
+
+/*uitleg game*/
+
+.titled{
+font-size:3rem ;
+text-align: center;
+margin-top: 2rem;
+margin-bottom: 0.6rem;
+}
+.uitleg-dylan{
+margin-left: 12rem;
+margin-right: 12rem;
+margin-bottom: 3rem;
+}
+.uitleg-dylan p {
+padding:0.5rem;
+}
+.stappenplan{
+font-weight: bold;
+font-size: 1.2rem;
+margin-bottom: 0.8rem;
+}
+
+/*potofolio*/
+.portdylan p {
+  padding: 0.5rem;
+}
+.portdylan {
+  margin-left: 12rem;
+  margin-right: 12rem;
+  margin-bottom: 3rem;
+}
+.download-button {
+  background-color: #03324f;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 1rem;
+}
+.dtext {
+  text-align: center;
+}
+.dtext1 {
+  text-align: center;
+  color: #03324f;
+}
+.hobbytext {
+  margin-bottom: 2rem;
+  color: #000;
+}
+.btnd {
+  background-color: #053b5d;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+/*Favo game*/
+.container {
+  padding-top: 6rem;
+  margin: 0 auto;
+  font-family: source sans pro, system-ui;
+}
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 7vw;
+  gap: 3rem;
+}
+.cards4 {
+  display: flex;
+  flex-direction: row;
+}
+.card-wrapper4 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 2;
+}
+.card-wrapper4:hover .popup4 {
+  display: block;
+}
+.card4 {
+  box-shadow: 0px 0px 10px -5px #333;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 400px);
+  transition: all 0.3s;
+  transform-origin: top center;
+}
+.card4:hover {
+  transform: rotatex(4deg) translatez(30px);
+  box-shadow: 0px 5px 10px -5px #333;
+}
+.popup4 {
+  display: none;
+  background-color: white;
+  position: absolute;
+  height: 73vh;
+  overflow: hidden;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+  transform: translatex(100%);
+  box-shadow: 0px 0px 10px -5px #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: popup 0.3s ease forwards 0.3s;
+  animation: popup 0.3s ease forwards 0.3s;
+}
+.popup4 h2,
+.popup4 p {
+  margin: 0.5rem;
+}
+.popup4 .bg-popup4 {
+  height: 25%;
+}
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.cards5 {
+  display: flex;
+  flex-direction: row;
+}
+.card-wrapper5 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 1;
+}
+.card-wrapper5:hover .popup5 {
+  display: block;
+}
+.card5 {
+  box-shadow: 0px 0px 10px -5px #333;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 400px);
+  transition: all 0.3s;
+  transform-origin: top center;
+}
+.card5:hover {
+  transform: rotatex(4deg) translatez(30px);
+  box-shadow: 0px 5px 10px -5px #333;
+}
+.popup5 {
+  display: none;
+  background-color: white;
+  position: absolute;
+  height: 71vh;
+  overflow: hidden;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+  transform: translatex(100%);
+  box-shadow: 0px 0px 10px -5px #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: popup 0.3s ease forwards 0.3s;
+  animation: popup 0.3s ease forwards 0.3s;
+}
+.popup5 h2,
+.popup5 p {
+  margin: 0.5rem;
+}
+.popup5 .bg-popup5 {
+  height: 25%;
+}
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.cards6 {
+  display: flex;
+  flex-direction: row;
+}
+.card-wrapper6 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.card-wrapper6:hover .popup6 {
+  display: block;
+}
+.card6 {
+  box-shadow: 0px 0px 10px -5px #333;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 400px);
+  transition: all 0.3s;
+  transform-origin: top center;
+}
+.card6:hover {
+  transform: rotatex(4deg) translatez(30px);
+  box-shadow: 0px 5px 10px -5px #333;
+}
+.popup6 {
+  display: none;
+  background-color: white;
+  position: absolute;
+  height: 76vh;
+  overflow: hidden;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+  transform: translatex(100%);
+  box-shadow: 0px 0px 10px -5px #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: popup 0.3s ease forwards 0.3s;
+  animation: popup 0.3s ease forwards 0.3s;
+}
+.popup6 h2,
+.popup6 p {
+  margin: 0.5rem;
+}
+.popup6 .bg-popup6 {
+  height: 25%;
+}
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Karim*/
+#img0 {
+  width: 30vw;
+  height: 30vh;
+  padding: 10px;
+}
+#titel{
+  padding: 10px;
+  text-align: center;
+  color: rgb(52, 56, 98);
+  font-family: serif;
+  font-size: 2rem;
+}
+
+#foot {
+  display: flow-root;
+  height: 12vh;
+  width: 100vw;
+  color: white;
+  background-color: #253d59;
+  align-items: center;
+  
+}
+#colorh2 {
+  color: #477c9d;
+  padding: 17px;
+}
+#slang1{
+  width: 7rem;
+  height: 7rem;
+  text-align: center;
+}
+#slang10{
+  text-align: center;
+  color: #224760;
+  padding: 10px;
+}
+
+#p10{
+  padding: 15px;
+}
+#h1{
+  padding: 15px;
+  font-size: 2rem;
+  text-align: center;
+  color: #477c9d;
+  font-family: serif;
+}
+#h4{
+  padding: 15px;
+}
+
+/*Tino*/
+
+/*Favo Game*/
+.container {
+  padding-top: 6rem;
+  margin: 0 auto;
+  font-family: source sans pro, system-ui;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 7vw;
+  gap: 3rem;
+}
+
+.cards1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-wrapper1 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 2;
+}
+.card-wrapper1:hover .popup1 {
+  display: block;
+}
+
+.card1 {
+  box-shadow: 0px 0px 10px -5px #333;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 400px);
+  transition: all 0.3s;
+  transform-origin: top center;
+}
+.card1:hover {
+  transform: rotatex(4deg) translatez(30px);
+  box-shadow: 0px 5px 10px -5px #333;
+}
+
+.popup1 {
+  display: none;
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+  transform: translatex(100%);
+  box-shadow: 0px 0px 10px -5px #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: popup 0.3s ease forwards 0.3s;
+  animation: popup 0.3s ease forwards 0.3s;
+}
+.popup1 h2,
+.popup1 p {
+  margin: 0.5rem;
+}
+.popup1 .bg-popup1 {
+  height: 25%;
+}
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cards2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-wrapper2 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 1;
+}
+.card-wrapper2:hover .popup2 {
+  display: block;
+}
+
+.card2 {
+  box-shadow: 0px 0px 10px -5px #333;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 400px);
+  transition: all 0.3s;
+  transform-origin: top center;
+}
+.card2:hover {
+  transform: rotatex(4deg) translatez(30px);
+  box-shadow: 0px 5px 10px -5px #333;
+}
+
+.popup2 {
+  display: none;
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+  transform: translatex(100%);
+  box-shadow: 0px 0px 10px -5px #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: popup 0.3s ease forwards 0.3s;
+  animation: popup 0.3s ease forwards 0.3s;
+}
+.popup2 h2,
+.popup2 p {
+  margin: 0.5rem;
+}
+.popup2 .bg-popup2 {
+  height: 25%;
+}
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cards3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-wrapper3 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.card-wrapper3:hover .popup3 {
+  display: block;
+}
+
+.card3 {
+  box-shadow: 0px 0px 10px -5px #333;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 400px);
+  transition: all 0.3s;
+  transform-origin: top center;
+}
+.card3:hover {
+  transform: rotatex(4deg) translatez(30px);
+  box-shadow: 0px 5px 10px -5px #333;
+}
+
+.popup3 {
+  display: none;
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0.5rem;
+  width: 100%;
+  transform: translatex(100%);
+  box-shadow: 0px 0px 10px -5px #333;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: popup 0.3s ease forwards 0.3s;
+  animation: popup 0.3s ease forwards 0.3s;
+}
+.popup3 h2,
+.popup3 p {
+  margin: 0.5rem;
+}
+.popup3 .bg-popup3 {
+  height: 25%;
+}
+@-webkit-keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*portofolio*/
+.porttino {
+  margin: 0 18rem 0 14rem;
+}
+
+.porth {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.porthp {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.portt {
+  padding-bottom: 1rem;
+}
+
+.portth {
+  padding-top: 1rem;
+}
+
+.portb {
+  padding-bottom: 1.5rem;
+}
+
+.porta {
+  margin-bottom: 3rem;
+  color: #000;
+  text-decoration: underline;
+}
+
+.btnt {
+  background-color: #053b5d;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.btnt:hover {
+  background-color: #044a75;
+}
+
+
+/*Uitleg Game*/
+.uittino {
+  margin: 0 18rem 0 14rem;
+}
+
+.uith {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.uithp {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+
+/*Game*/
+.btng {
+  display: flex;
+  margin: 1rem 0 1rem 0;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameb {
+  width: 90%;
+  height: 72vh;
+  position: absolute;
+  top: 130px;
+  left: 16vw;
+  overflow: hidden;
+}
+
+.logo1 {
+  width: 50px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  overflow: hidden;
+}
+.logo1pb {
+  width: 50px;
+  height: 50px;
+  background: rgba(196, 196, 196, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.logo1p {
+  width: 50px;
+  height: 50px;
+  background: url("./Tino/img-pdf/6.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.logo1t{
+  width: 50px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 12px;
+  opacity: 1;
+  text-align: center;
+}
+
+.logo2 {
+  width: 51px;
+  height: 75px;
+  position: absolute;
+  top: 75px;
+  left: 1px;
+  overflow: hidden;
+}
+.logo2t {
+  width: 50px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50px;
+  left: 1px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 12px;
+  opacity: 1;
+  text-align: center;
+}
+.logo2p {
+  width: 50px;
+  height: 50px;
+  background: url("./Tino/img-pdf/l.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+}
+
+.logo3 {
+  width: 50px;
+  height: 75px;
+  position: absolute;
+  top: 150px;
+  left: 2px;
+  overflow: hidden;
+}
+.logo3t {
+  width: 50px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 12px;
+  opacity: 1;
+  text-align: center;
+}
+.logo3pb {
+  width: 50px;
+  height: 50px;
+  background: rgba(196, 196, 196, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+  overflow: hidden;
+}
+.logo3p {
+  width: 45px;
+  height: 45px;
+  background: url("./Tino/img-pdf/s.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  overflow: hidden;
+}
+
+.logo4 {
+  width: 50px;
+  height: 75px;
+  position: absolute;
+  top: 225px;
+  left: 2px;
+  overflow: hidden;
+}
+.logo4pb {
+  width: 50px;
+  height: 50px;
+  background: rgba(196, 196, 196, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.logo4p {
+  width: 40px;
+  height: 40px;
+  background: url("./Tino/img-pdf/b.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+}
+.logo4t {
+  width: 50px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 12px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+
+/*minigame b*/
+
+/* Creating a box that is 650px by 650px. */
+.boxp {
+  width: 560px;
+  height: 560px;
+  position: absolute;
+  top: 3vh;
+  left: 31vw;
+  overflow: hidden;
+  box-shadow: black 20px 10px 50px;
+}
+/* Color of the box. */
+.box {
+  width: 650px;
+  height: 650px;
+  background: #142136;
+  overflow: hidden;
+}
+
+/* Creating a row of blocks. */
+.row1 {
+  width: 345px;
+  height: 75px;
+  position: absolute;
+  top: 106px;
+  left: 108px;
+  overflow: hidden;
+}
+.block1 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.block2 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 90px;
+  overflow: hidden;
+}
+.block3 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  overflow: hidden;
+}
+.block4 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  overflow: hidden;
+}
+
+/* Creating a row of blocks. */
+.row2 {
+  width: 345px;
+  height: 75px;
+  position: absolute;
+  top: 196px;
+  left: 108px;
+  overflow: hidden;
+}
+.block5 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.block6 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 90px;
+  overflow: hidden;
+}
+.block7 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  overflow: hidden;
+}
+.block8 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  overflow: hidden;
+}
+
+/* Creating a row of blocks. */
+.row3 {
+  width: 345px;
+  height: 75px;
+  position: absolute;
+  top: 286px;
+  left: 108px;
+  overflow: hidden;
+}
+.block9 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.block10 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 90px;
+  overflow: hidden;
+}
+.block11 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  overflow: hidden;
+}
+.block12 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  overflow: hidden;
+}
+
+/* Creating a row of blocks. */
+.row4 {
+  width: 345px;
+  height: 75px;
+  position: absolute;
+  top: 376px;
+  left: 108px;
+  overflow: hidden;
+}
+.block13 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.block14 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 90px;
+  overflow: hidden;
+}
+.block15 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  overflow: hidden;
+}
+.block16 {
+  width: 75px;
+  height: 75px;
+  background: #2b3851;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 270px;
+  overflow: hidden;
+}
+
+
+
+
+/*minigame l*/
+
+.boxp2 {
+  width: 744px;
+  height: 200px;
+  position: absolute;
+  top: 24vh;
+  left: 25vw;
+  overflow: hidden;
+}
+.blockp {
+  width: 744px;
+  height: 200px;
+  overflow: hidden;
+}
+.boxa {
+  width: 742px;
+  height: 200px;
+  background: rgba(19, 31, 52, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  overflow: hidden;
+}
+.boxt {
+  width: 744px;
+  color: rgba(200, 211, 227, 1);
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: center;
+}
+.blocks1 {
+  width: 700px;
+  height: 75px;
+  position: absolute;
+  top: 62px;
+  left: 23px;
+  overflow: hidden;
+}
+.block17 {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.block17t {
+  width: 75px;
+  height: 75px;
+  background: rgba(43, 56, 81, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.t1 {
+  width: 75px;
+  color: rgba(246, 252, 254, 1);
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.block18 {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 125px;
+  overflow: hidden;
+}
+.block18t {
+  width: 75px;
+  height: 75px;
+  background: rgba(43, 56, 81, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.t2 {
+  width: 75px;
+  color: rgba(246, 252, 254, 1);
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.block19 {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 250px;
+  overflow: hidden;
+}
+.block19t {
+  width: 75px;
+  height: 75px;
+  background: rgba(43, 56, 81, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.t3 {
+  width: 75px;
+  color: rgba(246, 252, 254, 1);
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.block20 {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 375px;
+  overflow: hidden;
+}
+.block20t {
+  width: 75px;
+  height: 75px;
+  background: rgba(43, 56, 81, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.t4 {
+  width: 75px;
+  color: rgba(246, 252, 254, 1);
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.block21 {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  overflow: hidden;
+}
+.block21t {
+  width: 75px;
+  height: 75px;
+  background: rgba(43, 56, 81, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.t5 {
+  width: 75px;
+  color: rgba(246, 252, 254, 1);
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.block22 {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 0px;
+  left: 625px;
+  overflow: hidden;
+}
+.block22t {
+  width: 75px;
+  height: 75px;
+  background: rgba(43, 56, 81, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.t6 {
+  width: 75px;
+  color: rgba(246, 252, 254, 1);
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+
+
+/*minigame p*/
+
+.box3p {
+  width: 800px;
+  height: 500px;
+  position: absolute;
+  top: 7vh;
+  left: 23vw;
+  overflow: hidden;
+  display: block;
+}
+.box3bg {
+  width: 800px;
+  height: 500px;
+  background: rgba(20, 33, 54, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.box3t {
+  width: 800px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: center;
+}
+.box3n {
+  width: 800px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 225px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 50px;
+  opacity: 1;
+  text-align: center;
+}
+.box4p {
+  width: 802px;
+  height: 500px;
+  position: absolute;
+  top: 7vh;
+  left: 23vw;
+  overflow: hidden;
+  display: none;
+}
+.box4bg {
+  width: 800px;
+  height: 500px;
+  background: rgba(20, 33, 54, 1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  overflow: hidden;
+}
+.box4t {
+  width: 800px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: center;
+}
+.box4n {
+  width: 802px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 235px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 30px;
+  opacity: 1;
+  text-align: center;
+  background-color: #2b3851;
+}
